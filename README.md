@@ -30,7 +30,7 @@ Additional requirements:
 
 ### source code
 
-All code is in  <code>src/</code>, which contains a combination of bash and python. The numbering at the beginning of each file name indicates the order in which that script should be run. Scripts containing the suffix "C" (e.g., 01C_fastp_align_fastq_RB-tn.sh) are specifically designed to handle sequencing data derived from RB-Tn-Seq experiments. All other scripts are specific for sequencing files from regular Tn-Seq experiments.
+All code is in  <code>src/</code>, which contains a combination of bash and python scripts. The numbering at the beginning of each file name indicates the order in which that script should be run. Scripts containing the suffix "C" (e.g., 01C_fastp_align_fastq_RB-tn.sh) are specifically designed to handle sequencing reads from RB-Tn-Seq experiments. All other scripts are specific for sequencing reads from regular Tn-Seq experiments.
 
 ### data
 
