@@ -12,6 +12,8 @@ This repository, including all code needed to reproduce analyses, can be install
 ~~~
 git clone https://github.com/maalcantar/tn-seq_data_analysis.git
 cd tn-seq_data_analysis
+conda create --name ngs_processing_source_fastp python=3.6
+source activate ngs_processing_source_fastp
 pip install -r requirements_python.txt #requirements for python scripts and Jupyter Notebooks
 ~~~
 
