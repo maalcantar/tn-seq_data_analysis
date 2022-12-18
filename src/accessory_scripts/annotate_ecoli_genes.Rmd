@@ -1,0 +1,176 @@
+---
+title: "annotate_ecoli_genes"
+---
+
+
+```{r}
+library("org.EcK12.eg.db")
+library(hash)
+```
+
+```{r}
+gene_to_entrez_id_crude <- function(path_to_gene_list){
+  
+  # automatically convert gene symbols to entrez ids, when possible. on first pass, 
+  # this function uses a database specific for E. coli gene symbol --> entrez id conversion
+  # (org.EcK12.egALIAS2EG). on second pass, all potential entrez ids are extracted 
+  # for all remaining genes using that were not assigned an entrez id using org.EcK12.eg.db. 
+  
+  #PARAMETERS
+  #--------------------
+  # path_to_gene_list: str
+    # path to gene list for e. coli strain of interest
+  
+  #RETURNS
+  #--------------------
+  # NONE
+  
+  # load in E. coli gene names extracted from bed file (this should be created using the 
+  # extract_gene_names.py acc) accessory script  
+  # additionally, load in e. coli database specific for gene symbol --> entrez id conversions (org.EcK12.egALIAS2EG)
+  e_coli_gene_list <- read.csv(path_to_gene_list,stringsAsFactors=F)
+  ecoli_gene_db_list <- as.list(org.EcK12.egALIAS2EG)
+  
+  # initialize hash map for storing gene symbol to entrez id conversion
+  gene_to_entrez_hash <- hash()
+  
+  # loop through all gene names and extract entrez id
+  for (gene in e_coli_gene_list$gene_name) 
+    {idx_tmp <- grepl(gene, names(ecoli_gene_db_list))
+    gene_to_entrez_tmp <-  ecoli_gene_db_list[idx_tmp]
+    
+    # if gene is not found in database, store empty string. otherwise, store gene name
+    if(length(gene_to_entrez_tmp) == 0)
+    {gene_to_entrez_hash[[gene]] <- ''
+    } 
+    else 
+    {gene_to_entrez_hash[[gene]] <- ecoli_gene_db_list[idx_tmp][[1]]
+    }
+    }
+  
+  # assign entrez id to genes not assigned an id on the first pass
+  # some genes will be assigned multiple entrez ids -- these will need to 
+  # be manually curated to find the best id. additionally, some genes will have no id assigned
+  for (gene_key in hash::keys(gene_to_entrez_hash))
+    {
+      tryCatch(
+        {if (length(gene_to_entrez_hash[[gene_key]]) >1 | length(gene_to_entrez_hash[[gene_key]]) == 0){
+          gkey_tmp <- AnnotationDbi::select(x = org.EcK12.eg.db,
+                                            keys = gene_key,
+                                            columns = c("ENTREZID","GENENAME"),
+                                            keytype = "SYMBOL")
+          gene_to_entrez_hash[[gene_key]] <- gkey_tmp$ENTREZID
+        }}, warning=function(warning_condition) {
+          print("warning message!")
+        }, error = function(error_condition) {
+          print(paste0("No valid ENTREZ ID found for:  ", gene_key))
+        },
+        finally={
+          
+        })
+    }
+
+
+# convert gene symbol --> entrez id hash map to a dataframe
+gene_symbols <- hash::keys(gene_to_entrez_hash)
+entrez_ids <- as.list(hash::values(gene_to_entrez_hash))
+genes_to_entrez_df <- tibble::tibble(gene_symbols=gene_symbols,
+                                     entrez_ids=hash::values(gene_to_entrez_hash, USE.NAMES = TRUE ))
+
+# programatically define output file path
+final_output_path_nonCurated <- create_file_path(path_to_gene_list, "_gene_to_entrez_nonCurated.csv")
+
+genes_to_entrez_df <- apply(genes_to_entrez_df,2,as.character)
+write.csv(genes_to_entrez_df, final_output_path_nonCurated)
+
+}
+
+```
+
+```{r}
+assign_annotations <- function(path_to_curated_gene_to_entrez) {
+  # assigns gene annotations to all genes with a valid entrez id 
+  # this should be performed on the 'gene_to_entrez_Curated' files
+  # to avoid genes with multiple entrez ids assigned
+  
+  #PARAMETERS
+  #--------------------
+  # path_to_curated_gene_to_entrez: str
+    # path to curated gene list + entrez ids for e. coli strain of interest
+  
+  #RETURNS
+  #--------------------
+  # NONE
+  
+  
+genes_to_entrez_curated_df <- read.delim(path_to_curated_gene_to_entrez,stringsAsFactors=F, sep = ',')
+genes_to_entrez_curated_df <- data.frame(lapply(genes_to_entrez_curated_df, as.character), stringsAsFactors=FALSE)
+
+entrez_to_annotation <- AnnotationDbi::select(x = org.EcK12.eg.db,
+                                  keys =  genes_to_entrez_curated_df$entrez_ids,
+                                  columns = c("ENTREZID","GENENAME"),
+                                  keytype = "ENTREZID")
+genes_to_entrez_curated_df$annotation <- entrez_to_annotation$GENENAME
+write.csv(genes_to_entrez_curated_df, path_to_curated_gene_to_entrez, row.names=FALSE)
+
+# programatically define output file path
+final_output_path_nonCurated <- create_file_path(path_to_curated_gene_to_entrez, "_gene_to_entrez_Curated_annotated.csv")
+
+
+genes_to_entrez_curated_df$annotation <- entrez_to_annotation$GENENAME
+write.csv(genes_to_entrez_curated_df, final_output_path_nonCurated, row.names=FALSE)
+
+}
+
+```
+
+```{r}
+create_file_path <- function(orig_file_path, str_to_append) {
+  
+  # append file path suffix to a file path of interest. this is specific 
+  # to creating the e. coli gene annotation files, as it assumes the substring preceding
+  # the '_' in the filename is an e. coli strain name (or some phrase to which you want to
+  # append a suffix)
+  
+  #PARAMETERS
+  #--------------------
+  # orig_file_path: str
+    # path to file to which you want to append a suffx
+  # str_to_append: str
+    # suffix to append
+  
+  #RETURNS
+  #--------------------
+  # final_output_path_nonCurated: str
+    # updated file path including strain name and desired suffix 
+  
+  # programatically define output file path
+  path_to_gene_list <- orig_file_path
+  split_path <- unlist(strsplit({path_to_gene_list},'/'))
+  split_path_fname <- tail(split_path, n=1)
+  split_path_dname <- split_path[-length(split_path)]
+  split_path_fname_strain <- head(unlist(strsplit({split_path_fname},'_')), n=1)
+  final_output_path_nonCurated <- paste0(c(split_path_dname,paste0(split_path_fname_strain, "_gene_to_entrez_Curated_annotated.csv")), collapse = '/')
+  
+  return(final_output_path_nonCurated)
+
+}
+```
+
+```{r}
+# script was run outside of Dropbox directories, so these paths will be different from the Dropbox paths
+# Final annotations will be done manually
+
+### MDS42 annotations ###
+gene_to_entrez_id_crude("../data/MDS42_genes.csv")
+# curate genes with multiple entrez ids and save as "../data/MDS42_gene_to_entrez_Curated.csv" before running next step
+assign_annotations("../data/MDS42_gene_to_entrez_Curated.csv")
+
+
+### MG1655 annotations ###
+gene_to_entrez_id_crude("../data/MG1655_genes.csv")
+# curate genes with multiple entrez ids and save as "../data/MG1655_gene_to_entrez_Curated.csv" before running next step
+assign_annotations("../data/MG1655_gene_to_entrez_Curated.csv")
+```
+
+

@@ -1,0 +1,2 @@
+spacer_height	genome_track_height	genome_track_color	genome_track_labels	genome_track_fontsize	genome_track_style	genome_track_generows	sample_track_color	sample_track_y_min_value	sample_track_y_max_value	sample_track_rasterize	sample_track_summary_method	sample_track_bin_number
+0.5	4	color = bed_rgb	true	10	flybase	3	cornflowerblue	0	auto	false	mean	1000

@@ -1,0 +1,61 @@
+### Commands for running Tradis pipeline directly from smalt bam files
+
+## run 'hacked' bacteria_tradis command on smalt files. This has to be run in
+# custom tradis virtual environment
+Bio-Tradis/bin/bacteria_tradis -f bam_files.txt -r AP012306.fa --smalt -v -n 6
+
+## remove extra lines from plot files that experienced soft-clipping
+sed '$d' 05_S99_L002.deduplicated.bam.AP012306.1.insert_site_plot | sed '$d' | sed '$d' > 05_S99_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2
+rm 05_S99_L002.deduplicated.bam.AP012306.1.insert_site_plot
+mv 05_S99_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2 05_S99_L002.deduplicated.bam.AP012306.1.insert_site_plot
+
+sed '$d' 08_S102_L002.deduplicated.bam.AP012306.1.insert_site_plot | sed '$d' | sed '$d' > 08_S102_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2
+rm 08_S102_L002.deduplicated.bam.AP012306.1.insert_site_plot
+mv 08_S102_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2 08_S102_L002.deduplicated.bam.AP012306.1.insert_site_plot
+
+sed '$d' 22_S116_L002.deduplicated.bam.AP012306.1.insert_site_plot | sed '$d' | sed '$d' > 22_S116_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2
+rm 22_S116_L002.deduplicated.bam.AP012306.1.insert_site_plot
+mv 22_S116_L002.deduplicated.bam.AP012306.1.insert_site_plot_v2 22_S116_L002.deduplicated.bam.AP012306.1.insert_site_plot
+
+## run peak annotation script -- this does not work when run in bulk,
+## so I wrote a script that runs things one at a time
+# this should be run in regular albatradis virtual environment
+annotate_peaks_alba.sh
+
+# the actual code for this is:
+#!/bin/bash
+
+for peak_file in "$@"
+do
+	tradis_gene_insert_sites AP012306.1.EMBL.txt $peak_file
+
+done
+
+## run comparison script
+tradis_comparison.R -h --controls controls.txt --conditions conditions.txt -f -t 128
+
+# controls.txt
+12_S106_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+13_S107_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+14_S108_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+15_S109_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+16_S110_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+17_S111_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+18_S112_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+19_S113_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+20_S114_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+21_S115_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+22_S116_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+
+# conditions.txt
+01_S95_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+02_S96_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+03_S97_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+04_S98_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+05_S99_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+06_S100_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+07_S101_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+08_S102_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+09_S103_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+10_S104_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
+11_S105_L002.deduplicated.bam.AP012306.1.tradis_gene_insert_sites.csv
