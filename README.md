@@ -23,9 +23,9 @@ Additional requirements:
 * Bowtie2 v2.4.4
 * Fastp v0.23.2 (https://github.com/OpenGene/fastp)
 * MACS v3.0.0a7 (https://github.com/macs3-project/MACS)
-* Samtools v1.6 (https://github.com/CGATOxford/UMI-tools)
+* Samtools v1.6 
 * Seqkit v2.2.0 (https://bioinf.shenwei.me/seqkit/)
-* UMI-tools v1.1.0
+* UMI-tools v1.1.0 (https://github.com/CGATOxford/UMI-tools)
 
 # Directory structure
 
