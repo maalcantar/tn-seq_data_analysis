@@ -65,7 +65,7 @@
 ######################################################
 
 # Activate virtual enviroment
-source activate macs3
+source activate ngs_processing_source_fastp
 
 nproc=7
 
