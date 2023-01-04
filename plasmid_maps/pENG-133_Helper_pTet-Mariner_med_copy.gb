@@ -1,0 +1,178 @@
+LOCUS       pENG-133_Helper_        3310 bp DNA     circular SYN 13-DEC-2022
+DEFINITION  synthetic circular DNA
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 3310)
+  AUTHORS   Atti English
+  TITLE     Direct Submission
+  JOURNAL   Exported Jan 4, 2023 from SnapGene 6.1.0
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..3310
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     rep_origin      complement(1..546)
+                     /direction=LEFT
+                     /label=p15A ori
+                     /note="Plasmids containing the medium-copy-number p15A 
+                     origin of replication can be propagated in E. coli cells 
+                     that contain a second plasmid with the ColE1 origin.
+                     "
+     primer_bind     complement(81..100)
+                     /label=oENG117
+     primer_bind     complement(530..550)
+                     /label=oENG869
+     primer_bind     537..575
+                     /label=oENG664_hifi
+     primer_bind     complement(538..556)
+                     /label=oENG253
+     primer_bind     complement(538..556)
+                     /label=oENG663_hifi
+     primer_bind     553..573
+                     /label=oENG868
+     promoter        557..661
+                     /label=CamR Promoter
+     CDS             662..1321
+                     /label=CamR
+     misc_feature    1322..1430
+                     /label=CamR Terminator
+     primer_bind     1325..1346
+                     /label=oENG352_seq
+     primer_bind     1380..1403
+                     /label=oENG350_seq
+     terminator      1392..1426
+                     /label=lambda t0 terminator
+                     /note="minimal transcription terminator from phage lambda 
+                     (Scholtissek and Grosse, 1987)"
+     primer_bind     complement(1413..1450)
+                     /label=oENG665_hifi
+     primer_bind     complement(1413..1430)
+                     /label=oENG669_hifi
+     primer_bind     complement(1414..1430)
+                     /label=org252_dest_subclo_lib131_1
+     CDS             complement(1431..2054)
+                     /codon_start=1
+                     /gene="tetR from transposon Tn10"
+                     /product="tetracycline repressor TetR"
+                     /label=TetR
+                     /note="TetR binds to the tetracycline operator tetO to 
+                     inhibit transcription. This inhibition can be relieved by 
+                     adding tetracycline or doxycycline."
+                     /translation="MSRLDKSKVINSALELLNEVGIEGLTTRKLAQKLGVEQPTLYWHV
+                     KNKRALLDALAIEMLDRHHTHFCPLEGESWQDFLRNNAKSFRCALLSHRDGAKVHLGTR
+                     PTEKQYETLENQLAFLCQQGFSLENALYALSAVGHFTLGCVLEDQEHQVAKEERETPTT
+                     DSMPPLLRQAIELFDHQGAEPAFLFGLELIICGLEKQLKCESGS"
+     primer_bind     1431..1454
+                     /label=oENG662_hifi
+     primer_bind     1431..1454
+                     /label=oENG882_res
+     primer_bind     1541..1561
+                     /label=oENG129
+     primer_bind     complement(1774..1795)
+                     /label=oENG133
+     primer_bind     1962..1981
+                     /label=oENG175
+     promoter        2073..2128
+                     /gene="tetR"
+                     /label=tetR/tetA promoters
+                     /note="overlapping promoters for bacterial tetR and tetA"
+     protein_bind    2109..2127
+                     /gene="tetO"
+                     /label=tet operator
+                     /bound_moiety="tetracycline repressor TetR"
+                     /note="bacterial operator O2 for the tetR and tetA genes"
+     primer_bind     2129..2154
+                     /label=oENG668_hifi
+     RBS             2146..2157
+                     /note="strong bacterial ribosome binding site (Elowitz and 
+                     Leibler, 2000)"
+     CDS             2164..3210
+                     /codon_start=1
+                     /product="Mariner transposase himar1C9 gene for transposon 
+                     mutagenesis and Tn-seq"
+                     /label=himar1C9
+                     /translation="MEKKEFRVLIKYCFLKGKNTVEAKTWLDNEFPDSAPGKSTIIDWY
+                     AKFKRGEMSTEDGERSGRPKEVVTDENIKKIHKMILNDRKMKLIEIAEALKISKERVGH
+                     IIHQYLDMRKLCAKWVPRELTFDQKQRRVDDSKRCLQLLTRNTPEFFRRYVTMDETWLH
+                     HYTPESNRQSAEWTATGEPSPKRGKTQKSAGKVMASVFWDAHGIIFIDYLEKGKTINSD
+                     YYMALLERLKVEIAAKRPHMKKKKVLFHQDNAPCHKSLRTMAKIHELGFELLPHPPYSP
+                     DLAPSDFFLFSDLKRMLAGKKFGCNEEVIAETEAYFEAKPKEYYQNGIKKLEGRYNRCI
+                     ALEGNYVE"
+     primer_bind     2504..2522
+                     /label=oENG547
+     primer_bind     3115..3134
+                     /label=oENG548
+     primer_bind     complement(3187..3236)
+                     /label=oENG667_kld
+     primer_bind     complement(3187..3210)
+                     /label=oENG883_res
+     primer_bind     complement(3187..3207)
+                     /label=oENG657_kld
+     terminator      3211..3263
+                     /label=BBa_K864601
+                     /note="Lambda t1 transcriptional terminator
+                     
+                     "
+     primer_bind     3237..3286
+                     /label=oENG666_kld
+ORIGIN
+        1 tttccatagg ctccgccccc ctgacaagca tcacgaaatc tgacgctcaa atcagtggtg
+       61 gcgaaacccg acaggactat aaagatacca ggcgtttccc cctggcggct ccctcgtgcg
+      121 ctctcctgtt cctgcctttc ggtttaccgg tgtcattccg ctgttatggc cgcgtttgtc
+      181 tcattccacg cctgacactc agttccgggt aggcagttcg ctccaagctg gactgtatgc
+      241 acgaaccccc cgttcagtcc gaccgctgcg ccttatccgg taactatcgt cttgagtcca
+      301 acccggaaag acatgcaaaa gcaccactgg cagcagccac tggtaattga tttagaggag
+      361 ttagtcttga agtcatgcgc cggttaaggc taaactgaaa ggacaagttt tggtgactgc
+      421 gctcctccaa gccagttacc tcggttcaaa gagttggtag ctcagagaac cttcgaaaaa
+      481 ccgccctgca aggcggtttt ttcgttttca gagcaagaga ttacgcgcag accaaaacga
+      541 tctcaagaag atcatcttga tcgggcacgt aagaggttcc aactttcacc ataatgaaat
+      601 aagatcacta ccgggcgtat tttttgagtt atcgagattt tcaggagcta aggaagctaa
+      661 aatggagaaa aaaatcactg gatataccac cgttgatata tcccaatggc atcgtaaaga
+      721 acattttgag gcatttcagt cagttgctca atgtacctat aaccagaccg ttcagctgga
+      781 tattacggcc tttttaaaga ccgtaaagaa aaataagcac aagttttatc cggcctttat
+      841 tcacattctt gcccgcctga tgaatgctca tccggaattt cgtatggcaa tgaaagacgg
+      901 tgagctggtg atatgggata gtgttcaccc ttgttacacc gttttccatg agcaaactga
+      961 aacgttttca tcgctctgga gtgaatacca cgacgatttc cggcagtttc tacacatata
+     1021 ttcgcaagat gtggcgtgtt acggtgaaaa cctggcctat ttccctaaag ggtttattga
+     1081 gaatatgttt ttcgtttcag ccaatccctg ggtgagtttc accagttttg atttaaacgt
+     1141 ggccaatatg gacaacttct tcgcccccgt tttcaccatg ggcaaatatt atacgcaagg
+     1201 cgacaaggtg ctgatgccgc tggcgattca ggttcatcat gccgtttgtg atggcttcca
+     1261 tgtcggcaga atgcttaatg aattacaaca gtactgcgat gagtggcagg gcggggcgta
+     1321 atttgatatc gagctcgctt ggactcctgt tgatagatcc agtaatgacc tcagaactcc
+     1381 atctggattt gttcagaacg ctcggttgcc gccgggcgtt ttttattggt ttaagaccca
+     1441 ctttcacatt taagttgttt ttctaatccg catatgatca attcaaggcc gaataagaag
+     1501 gctggctctg caccttggtg atcaaataat tcgatagctt gtcgtaataa tggcggcata
+     1561 ctatcagtag taggtgtttc cctttcttct ttagcgactt gatgctcttg atcttccaat
+     1621 acgcaaccta aagtaaaatg ccccacagcg ctgagtgcat ataatgcatt ctctagtgaa
+     1681 aaaccttgtt ggcataaaaa ggctaattga ttttcgagag tttcatactg tttttctgta
+     1741 ggccgtgtac ctaaatgtac ttttgctcca tcgcgatgac ttagtaaagc acatctaaaa
+     1801 cttttagcgt tattacgtaa aaaatcttgc cagctttccc cttctaaagg gcaaaagtga
+     1861 gtatggtgcc tatctaacat ctcaatggct aaggcgtcga gcaaagcccg cttatttttt
+     1921 acatgccaat acaatgtagg ctgctctaca cctagcttct gggcgagttt acgggttgtt
+     1981 aaaccttcga ttccgacctc attaagcagc tctaatgcgc tgttaatcac tttactttta
+     2041 tctaatctag acatcattaa ttcctaattt ttgttgacac tctatcgttg atagagttat
+     2101 tttaccactc cctatcagtg atagagaaaa gaattcaaaa gatctaaaga ggagaaagga
+     2161 tctatggaaa aaaaggaatt tcgtgttttg ataaaatact gttttctgaa gggaaaaaat
+     2221 acagtggaag caaaaacttg gcttgataat gagtttccgg actctgcccc ggggaaatca
+     2281 acaataattg attggtatgc aaaattcaag cgtggtgaaa tgagcacgga ggacggtgaa
+     2341 cgcagtggac gcccgaaaga ggtggttacc gacgaaaaca tcaaaaaaat ccacaaaatg
+     2401 attttgaatg accgtaaaat gaagttgatc gagatagcag aggccttaaa gatatcaaag
+     2461 gaacgtgttg gtcatatcat tcatcaatat ttggatatgc ggaagctctg tgcgaaatgg
+     2521 gtgccgcgcg agctcacatt tgaccaaaaa caacgacgtg ttgatgattc taagcggtgt
+     2581 ttgcagctgt taactcgtaa tacacccgag tttttccgtc gatatgtgac aatggatgaa
+     2641 acatggctcc atcactacac tcctgagtcc aatcgacagt cggctgagtg gacagcgacc
+     2701 ggtgaaccgt ctccgaagcg tggaaagact caaaagtccg ctggcaaagt aatggcctct
+     2761 gttttttggg atgcgcatgg aataattttt atcgattatc ttgagaaggg aaaaaccatc
+     2821 aacagtgact attatatggc gttattggag cgtttgaagg tcgaaatcgc ggcaaaacgg
+     2881 ccccacatga agaagaaaaa agtgttgttc caccaagaca acgcaccgtg ccacaagtca
+     2941 ttgagaacga tggcaaaaat tcatgaattg ggcttcgaat tgcttcccca cccgccgtat
+     3001 tctccagatc tggcccccag cgactttttc ttgttctcag acctcaaaag gatgctcgca
+     3061 gggaaaaaat ttggctgcaa tgaagaggtg atcgccgaaa ctgaggccta ttttgaggca
+     3121 aaaccgaagg agtactacca aaatggtatc aaaaaattgg aaggtcgtta taatcgttgt
+     3181 atcgctcttg aagggaacta tgttgaataa ctgtaacaga gcattagcgc aaggtgattt
+     3241 ttgtcttctt gcgctaattt tttcaggaag atacttaata gggaagtgag agggccgcgg
+     3301 caaagccgtt
+//

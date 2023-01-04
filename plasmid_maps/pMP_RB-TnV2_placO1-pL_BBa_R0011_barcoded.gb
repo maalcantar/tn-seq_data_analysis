@@ -1,0 +1,268 @@
+LOCUS       pMP-001_8_BBa_R0        3765 bp DNA     circular SYN 13-JUN-2022
+DEFINITION  synthetic circular DNA
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  recombinant plasmid
+REFERENCE   1  (bases 1 to 3765)
+  AUTHORS   Collins Lab
+  TITLE     Direct Submission
+  JOURNAL   Exported Jan 4, 2023 from SnapGene 6.1.0
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..3765
+                     /mol_type="other DNA"
+                     /organism="recombinant plasmid"
+     rep_origin      1..389
+                     /label=R6K gamma ori
+                     /note="gamma replication origin from E. coli plasmid R6K; 
+                     requires the R6K initiator protein pi for replication"
+     primer_bind     2..20
+                     /label=oENG696
+     primer_bind     complement(9..30)
+                     /label=oENG236
+     primer_bind     35..54
+                     /label=oENG720
+     primer_bind     158..180
+                     /label=oENG721
+     primer_bind     373..392
+                     /label=oENG722
+     oriT            504..613
+                     /note="incP origin of transfer"
+     primer_bind     complement(624..643)
+                     /label=oENG673
+     primer_bind     complement(723..741)
+                     /label=oENG707
+     CDS             complement(777..1637)
+                     /codon_start=1
+                     /gene="bla"
+                     /product="beta-lactamase"
+                     /label=AmpR
+                     /note="confers resistance to ampicillin, carbenicillin, and
+                     related antibiotics"
+                     /translation="MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYI
+                     ELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRIDAGQEQLGRRIHYSQNDLVEYS
+                     PVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRW
+                     EPELNEAIPNDERDTTMPVAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSA
+                     LPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGAS
+                     LIKHW"
+     primer_bind     1486..1506
+                     /label=oENG244
+     promoter        complement(1638..1742)
+                     /gene="bla"
+                     /label=AmpR promoter
+     primer_bind     1759..1777
+                     /label=oENG706
+     primer_bind     1768..1791
+                     /label=oENG672
+     primer_bind     complement(1770..1805)
+                     /label=oENG886_part4_bb_amp
+     primer_bind     complement(1782..1805)
+                     /label=oENG891
+     primer_bind     1798..1828
+                     /label=oENG896_mp1
+     misc_feature    1800..1803
+                     /label=MagicPools_Part5_F
+     primer_bind     1814..1832
+                     /label=oENG410
+     primer_bind     complement(1821..1839)
+                     /label=oENG958_hifi
+     primer_bind     1849..1869
+                     /label=oENG957_hifi
+     LTR             1860..1889
+                     /label=Minimal mariner ITR
+     promoter        complement(1894..1948)
+                     /label=BBa_R0011_lacI_lambda_pL_hybrid
+     protein_bind    1907..1923
+                     /label=lac operator
+                     /bound_moiety="lac repressor encoded by lacI"
+                     /note="The lac repressor binds to the lac operator to 
+                     inhibit transcription in E. coli. This inhibition can be 
+                     relieved by adding lactose or 
+                     isopropyl-beta-D-thiogalactopyranoside (IPTG)."
+     protein_bind    1930..1946
+                     /label=lac operator
+                     /bound_moiety="lac repressor encoded by lacI"
+                     /note="The lac repressor binds to the lac operator to 
+                     inhibit transcription in E. coli. This inhibition can be 
+                     relieved by adding lactose or 
+                     isopropyl-beta-D-thiogalactopyranoside (IPTG)."
+     protein_bind    1949..1952
+                     /label=BsmBI
+     misc_feature    1953..2022
+                     /label=from_natural_himar1
+     misc_feature    complement(1986..2013)
+                     /label=potential_promoter_cured
+     terminator      complement(2023..2169)
+                     /label=DT19_terminator
+                     /note="Fw = 770, Rev = 1.2"
+     terminator      2080..2169
+                     /label=ECK120029600
+     primer_bind     2170..2187
+                     /label=oENG860_hifi
+     primer_bind     complement(2201..2224)
+                     /label=oENG897_mp1
+     primer_bind     2263..2285
+                     /label=oENG892_mp3
+     misc_feature    2263..2266
+                     /label=MagicPools_Part3_F
+     primer_bind     complement(2270..2287)
+                     /label=oENG618
+     primer_bind     2288..2305
+                     /label=oENG617
+     promoter        2329..2378
+                     /label=neomycin_kanamycin_promoter_region Promoter|pro
+                     /label=neomycin_kanamycin_promoter_region Promoter|promoter
+     CDS             2467..3261
+                     /codon_start=1
+                     /gene="aph(3')-II (or nptII)"
+                     /product="aminoglycoside phosphotransferase from Tn5"
+                     /label=NeoR/KanR
+                     /note="confers resistance to neomycin, kanamycin, and G418 
+                     (Geneticin(R))"
+                     /translation="MIEQDGLHAGSPAAWVERLFGYDWAQQTIGCSDAAVFRLSAQGRP
+                     VLFVKTDLSGALNELQDEAARLSWLATTGVPCAAVLDVVTEAGRDWLLLGEVPGQDLLS
+                     SHLAPAEKVSIMADAMRRLHTLDPATCPFDHQAKHRIERARTRMEAGLVDQDDLDEEHQ
+                     GLAPAELFARLKARMPDGEDLVVTHGDACLPNIMVENGRFSGFIDCGRLGVADRYQDIA
+                     LATRDIAEELGGEWADRFLVLYGIAAPDSQRIAFYRLLDEFF"
+     primer_bind     complement(2521..2540)
+                     /label=oENG113
+     primer_bind     3131..3150
+                     /label=oENG114
+     primer_bind     3262..3279
+                     /label=oENG887_gblock_fwd_hifi
+     primer_bind     3262..3279
+                     /label=pHIMAR_eng_
+                     oligo5
+     primer_bind     3296..3313
+                     /label=oENG766
+     terminator      3320..3406
+                     /gene="Escherichia coli rrnB"
+                     /label=rrnB T1 terminator
+                     /note="transcription terminator T1 from the E. coli rrnB 
+                     gene"
+     primer_bind     complement(3329..3350)
+                     /label=oENG187
+     primer_bind     complement(3389..3406)
+                     /label=oENG415
+     primer_bind     complement(3389..3406)
+                     /label=oENG444
+     terminator      3498..3525
+                     /label=rrnB T2 terminator
+                     /note="transcription terminator T2 from the E. coli rrnB 
+                     gene"
+     primer_bind     complement(3515..3540)
+                     /label=oENG893_mp3
+     primer_bind     3537..3560
+                     /label=ofeba146
+     primer_bind     3537..3558
+                     /label=oENG887_gblock_fwd_hifi
+     misc_feature    3537..3540
+                     /label=MagicPools_Part4_F
+     primer_bind     3541..3580
+                     /label=pHIMAR_eng_
+                     oligo5
+     primer_bind     3581..3606
+                     /label=Amp_barcode
+                     s_FOR_Gatew
+                     ay_SbfI
+     misc_feature    3587..3650
+                     /label=RB-Tn-seq_barcode
+     primer_bind     3589..3606
+                     /label=sENG-037_BarseqP2
+     gap             3607..3626
+                     /estimated_length=20
+     primer_bind     complement(3627..3653)
+                     /label=Amp_barcode
+                     s_REV_Gatew
+                     ay_FseI
+     primer_bind     complement(3627..3649)
+                     /label=sENG-036_BarseqP1
+     LTR             3652..3681
+                     /label=Minimal mariner ITR
+     primer_bind     3706..3728
+                     /label=oENG137
+     primer_bind     3720..3737
+                     /label=oENG379
+     primer_bind     3721..3737
+                     /label=M13 fwd
+                     /note="common sequencing primer, one of multiple similar 
+                     variants"
+     primer_bind     complement(3728..3765)
+                     /label=oENG888_gblock_hifi_rev
+     primer_bind     join(3746..3765,1..8)
+                     /label=oENG889_bb_hifi_fw
+     primer_bind     join(3750..3765,1..7)
+                     /label=oENG808_kld
+     primer_bind     join(3750..3765,1..7)
+                     /label=oENG815_kld
+     primer_bind     join(3756..3765,1..9)
+                     /label=oENG704_kld
+     primer_bind     join(3764..3765,1..20)
+                     /label=oENG702_kld
+ORIGIN
+        1 tgtcagccgt taagtgttcc tgtgtcactc aaaattgctt tgagaggctc taagggcttc
+       61 tcagtgcgtt acatccctgg cttgttgtcc acaaccgtta aaccttaaaa gctttaaaag
+      121 ccttatatat tctttttttt cttataaaac ttaaaacctt agaggctatt taagttgctg
+      181 atttatatta attttattgt tcaaacatga gagcttagta cgtgaaacat gagagcttag
+      241 tacgttagcc atgagagctt agtacgttag ccatgagggt ttagttcgtt aaacatgaga
+      301 gcttagtacg ttaaacatga gagcttagta cgtgaaacat gagagcttag tacgtactat
+      361 caacaggttg aactgctgat cttcagatcc tctacgccgg acgcatcgtg gccggatcaa
+      421 ttccgtgata ggtgggctgc ccttcctggt tggcttggtt tcatcagcca tccgcttgcc
+      481 ctcatctgtt acgccggcgg tagccggcca gcctcgcaga gcaggattcc cgttgagcac
+      541 cgccaggtgc gaataaggga cagtgaagaa ggaacacccg ctcgcgggtg ggcctacttc
+      601 acctatcctg cccggctgac gccgttggat acaccaagga aagtctacac gaaccctttg
+      661 gcaaaatcct gtatatcgtg cgaaaaagga tggatatacc gaaaaaatcg ctataatgac
+      721 cccgaagcag ggttatgcag cggaaaacgg aattgatccc cctcgaattg acgcgtttac
+      781 caatgcttaa tcagtgaggc acctatctca gcgatctgtc tatttcgttc atccatagtt
+      841 gcctgactcc ccgtcgtgta gataactacg atacgggagg gcttaccatc tggccccagt
+      901 gctgcaatga taccgcgaga cccacgctca ccggctccag atttatcagc aataaaccag
+      961 ccagccggaa gggccgagcg cagaagtggt cctgcaactt tatccgcctc catccagtct
+     1021 attaattgtt gccgggaagc tagagtaagt agttcgccag ttaatagttt gcgcaacgtt
+     1081 gttgccattg ctacaggcat cgtggtgtca cgctcgtcgt ttggtatggc ttcattcagc
+     1141 tccggttccc aacgatcaag gcgagttaca tgatccccca tgttgtgcaa aaaagcggtt
+     1201 agctccttcg gtcctccgat cgttgtcaga agtaagttgg ccgcagtgtt atcactcatg
+     1261 gttatggcag cactgcataa ttctcttact gtcatgccat ccgtaagatg cttttctgtg
+     1321 actggtgagt actcaaccaa gtcattctga gaatagtgta tgcggcgacc gagttgctct
+     1381 tgcccggcgt caatacggga taataccgcg ccacatagca gaactttaaa agtgctcatc
+     1441 attggaaaac gttcttcggg gcgaaaactc tcaaggatct taccgctgtt gagatccagt
+     1501 tcgatgtaac ccactcgtgc acccaactga tcttcagcat cttttacttt caccagcgtt
+     1561 tctgggtgag caaaaacagg aaggcaaaat gccgcaaaaa agggaataag ggcgacacgg
+     1621 aaatgttgaa tactcatact cttccttttt caatattatt gaagcattta tcagggttat
+     1681 tgtctcatga gcggatacat atttgaatgt atttagaaaa ataaacaaat aggggttccg
+     1741 cgcacatttc cccgaaaagt gccacctgac gtctaagaaa ccattattat catgacattt
+     1801 atcaacctat aaaaataggc gtatcacgag gccctttcgt cacgcgtcct cggtacctat
+     1861 aacaggttgg ctgataagtc cccggtctgc tgatgtgctc agtatcttgt tatccgctca
+     1921 caatgtcaat tgttatccgc tcacaattag caacacatag atggcgtcgc tagtattaaa
+     1981 tgcatatgac tttcatatag taccaacctg gtgatgattc ccggaccaaa acgaaaaaag
+     2041 acgcttttca gcgtcttatt gttcgtcttt ggtaccgagt tgagaagaga aaagaaaacc
+     2101 gccgatcctg tccaccgcat tactgcaagg tagtggacaa gaccggcggt cttaagtttt
+     2161 ttggctgaaa gctactgggc tatctggaca agggaaaacg caagcgcaaa gagaaagcag
+     2221 aggatcgact ctagaggatc cccgggtacc gagctcgaat tctgattagc ttgcagtggg
+     2281 cttacatggc gatagctaga ctgggcggtt ttatggacag caagcgaacc ggaattgcca
+     2341 gctggggcgc cctctggtaa ggttgggaag ccctgcaaag taaactggat ggctttcttg
+     2401 ccgccaagga tctgatggcg caggggatca agatctgatc aagagacagg atgaggatcg
+     2461 tttcgcatga ttgaacaaga tggattgcac gcaggttctc cggccgcttg ggtggagagg
+     2521 ctattcggct atgactgggc acaacagaca atcggctgct ctgatgccgc cgtgttccgg
+     2581 ctgtcagcgc aggggcgccc ggttcttttt gtcaagaccg acctgtccgg tgccctgaat
+     2641 gaactgcagg acgaggcagc gcggctatcg tggctggcca cgacgggcgt tccttgcgca
+     2701 gctgtgctcg acgttgtcac tgaagcggga agggactggc tgctattggg cgaagtgccg
+     2761 gggcaggatc tcctgtcatc tcaccttgct cctgccgaga aagtatccat catggctgat
+     2821 gcaatgcggc ggctgcatac gcttgatccg gctacctgcc cattcgacca ccaagcgaaa
+     2881 catcgcatcg agcgagcacg tactcggatg gaagccggtc ttgtcgatca ggatgatctg
+     2941 gacgaagagc atcaggggct cgcgccagcc gaactgttcg ccaggctcaa ggcgcgcatg
+     3001 cccgacggcg aggatctcgt cgtgacccat ggcgatgcct gcttgccgaa tatcatggtg
+     3061 gaaaatggcc gcttttctgg attcatcgac tgtggccggc tgggtgtggc ggaccgctat
+     3121 caggacatag cgttggctac ccgtgatatt gctgaagagc ttggcggcga atgggctgac
+     3181 cgcttcctcg tgctttacgg tatcgccgct cccgattcgc agcgcatcgc cttctatcgc
+     3241 cttcttgacg agttcttctg agcgggactc tggggttcga aatgactcta gaatgcgaga
+     3301 gtagggaact gccaggcatc aaataaaacg aaaggctcag tcgaaagact gggcctttcg
+     3361 ttttatctgt tgtttgtcgg tgaacgctct cctgagtagg acaaatccgc cgggagcgga
+     3421 tttgaacgtt gcgaagcaac ggcccggagg gtggcgggca ggacgcccgc cataaactgc
+     3481 caggcatcaa attaagcaga aggccatcct gacggatggc ctttttgcgt ttctacgctg
+     3541 gcgggactct ggggttcgcg acactggcag agcattacgc cctgcaggga tgtccacgag
+     3601 gtctctnnnn nnnnnnnnnn nnnnnncgta cgctgcaggt cgacggccgg ccagaccggg
+     3661 gacttatcag ccaacctgtt atgtgttggg taacgccagg gttttcccag tcacgacgtt
+     3721 gtaaaacgac ggccagtgaa ttaattcttg cttatggaat tccca
+//

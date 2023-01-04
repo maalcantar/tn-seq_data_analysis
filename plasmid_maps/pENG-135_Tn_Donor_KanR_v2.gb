@@ -1,0 +1,187 @@
+LOCUS       pENG-135_Donor_K        3401 bp DNA     circular SYN 13-DEC-2022
+DEFINITION  synthetic circular DNA
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      synthetic DNA construct
+  ORGANISM  synthetic DNA construct
+REFERENCE   1  (bases 1 to 3401)
+  AUTHORS   Atti English
+  TITLE     Direct Submission
+  JOURNAL   Exported Jan 4, 2023 from SnapGene 6.1.0
+            https://www.snapgene.com
+FEATURES             Location/Qualifiers
+     source          1..3401
+                     /mol_type="other DNA"
+                     /organism="synthetic DNA construct"
+     CDS             complement(18..878)
+                     /codon_start=1
+                     /gene="bla"
+                     /product="beta-lactamase"
+                     /label=AmpR
+                     /note="confers resistance to ampicillin, carbenicillin, and
+                     related antibiotics"
+                     /translation="MSIQHFRVALIPFFAAFCLPVFAHPETLVKVKDAEDQLGARVGYI
+                     ELDLNSGKILESFRPEERFPMMSTFKVLLCGAVLSRIDAGQEQLGRRIHYSQNDLVEYS
+                     PVTEKHLTDGMTVRELCSAAITMSDNTAANLLLTTIGGPKELTAFLHNMGDHVTRLDRW
+                     EPELNEAIPNDERDTTMPVAMATTLRKLLTGELLTLASRQQLIDWMEADKVAGPLLRSA
+                     LPAGWFIADKSGAGERGSRGIIAALGPDGKPSRIVVIYTTGSQATMDERNRQIAEIGAS
+                     LIKHW"
+     primer_bind     727..747
+                     /label=oENG244
+     promoter        complement(879..983)
+                     /gene="bla"
+                     /label=AmpR promoter
+     primer_bind     1000..1018
+                     /label=oENG706
+     primer_bind     1009..1032
+                     /label=oENG672
+     primer_bind     complement(1011..1040)
+                     /label=oENG886_part4_bb_amp
+     primer_bind     1051..1069
+                     /label=oENG410
+     primer_bind     1093..1108
+                     /label=oENG816_kld
+     misc_feature    1097..1153
+                     /label=Mariner_ITR
+     primer_bind     complement(1205..1224)
+                     /label=oENG861_hifi
+     primer_bind     1224..1241
+                     /label=oENG860_hifi
+     primer_bind     1276..1294
+                     /label=oENG892_mp3
+     primer_bind     complement(1279..1296)
+                     /label=oENG618
+     primer_bind     1297..1314
+                     /label=oENG617
+     promoter        1338..1387
+                     /label=neomycin_kanamycin_promoter_region Promoter|pro
+                     /label=neomycin_kanamycin_promoter_region Promoter|promoter
+     CDS             1476..2270
+                     /codon_start=1
+                     /gene="aph(3')-II (or nptII)"
+                     /product="aminoglycoside phosphotransferase from Tn5"
+                     /label=NeoR/KanR
+                     /note="confers resistance to neomycin, kanamycin, and G418 
+                     (Geneticin(R))"
+                     /translation="MIEQDGLHAGSPAAWVERLFGYDWAQQTIGCSDAAVFRLSAQGRP
+                     VLFVKTDLSGALNELQDEAARLSWLATTGVPCAAVLDVVTEAGRDWLLLGEVPGQDLLS
+                     SHLAPAEKVSIMADAMRRLHTLDPATCPFDHQAKHRIERARTRMEAGLVDQDDLDEEHQ
+                     GLAPAELFARLKARMPDGEDLVVTHGDACLPNIMVENGRFSGFIDCGRLGVADRYQDIA
+                     LATRDIAEELGGEWADRFLVLYGIAAPDSQRIAFYRLLDEFF"
+     primer_bind     complement(1530..1549)
+                     /label=oENG113
+     primer_bind     2140..2159
+                     /label=oENG114
+     terminator      2329..2415
+                     /gene="Escherichia coli rrnB"
+                     /label=rrnB T1 terminator
+                     /note="transcription terminator T1 from the E. coli rrnB 
+                     gene"
+     primer_bind     complement(2338..2359)
+                     /label=oENG187
+     primer_bind     complement(2398..2415)
+                     /label=oENG415
+     primer_bind     complement(2398..2415)
+                     /label=oENG444
+     terminator      2507..2534
+                     /label=rrnB T2 terminator
+                     /note="transcription terminator T2 from the E. coli rrnB 
+                     gene"
+     primer_bind     complement(2524..2545)
+                     /label=oENG893_mp3
+     misc_feature    2550..2606
+                     /label=Mariner_ITR
+     primer_bind     complement(2595..2622)
+                     /label=oENG816_kld
+     primer_bind     complement(2599..2623)
+                     /label=oENG809_kld
+     primer_bind     complement(2605..2626)
+                     /label=oENG703_kld
+     primer_bind     complement(2614..2632)
+                     /label=oENG705_kld
+     primer_bind     2623..2649
+                     /label=oENG815_kld
+     primer_bind     2624..2649
+                     /label=oENG808_kld
+     primer_bind     2632..2650
+                     /label=oENG889_bb_hifi_fw
+     primer_bind     2633..2651
+                     /label=oENG704_kld
+     primer_bind     2641..2662
+                     /label=oENG702_kld
+     rep_origin      2643..3031
+                     /label=R6K gamma ori
+                     /note="gamma replication origin from E. coli plasmid R6K; 
+                     requires the R6K initiator protein pi for replication"
+     primer_bind     2644..2662
+                     /label=oENG696
+     primer_bind     complement(2651..2672)
+                     /label=oENG236
+     primer_bind     2677..2696
+                     /label=oENG720
+     primer_bind     2800..2822
+                     /label=oENG721
+     primer_bind     3015..3034
+                     /label=oENG722
+     oriT            3146..3255
+                     /note="incP origin of transfer"
+ORIGIN
+        1 ccctcgaatt gacgcgttta ccaatgctta atcagtgagg cacctatctc agcgatctgt
+       61 ctatttcgtt catccatagt tgcctgactc cccgtcgtgt agataactac gatacgggag
+      121 ggcttaccat ctggccccag tgctgcaatg ataccgcgag acccacgctc accggctcca
+      181 gatttatcag caataaacca gccagccgga agggccgagc gcagaagtgg tcctgcaact
+      241 ttatccgcct ccatccagtc tattaattgt tgccgggaag ctagagtaag tagttcgcca
+      301 gttaatagtt tgcgcaacgt tgttgccatt gctacaggca tcgtggtgtc acgctcgtcg
+      361 tttggtatgg cttcattcag ctccggttcc caacgatcaa ggcgagttac atgatccccc
+      421 atgttgtgca aaaaagcggt tagctccttc ggtcctccga tcgttgtcag aagtaagttg
+      481 gccgcagtgt tatcactcat ggttatggca gcactgcata attctcttac tgtcatgcca
+      541 tccgtaagat gcttttctgt gactggtgag tactcaacca agtcattctg agaatagtgt
+      601 atgcggcgac cgagttgctc ttgcccggcg tcaatacggg ataataccgc gccacatagc
+      661 agaactttaa aagtgctcat cattggaaaa cgttcttcgg ggcgaaaact ctcaaggatc
+      721 ttaccgctgt tgagatccag ttcgatgtaa cccactcgtg cacccaactg atcttcagca
+      781 tcttttactt tcaccagcgt ttctgggtga gcaaaaacag gaaggcaaaa tgccgcaaaa
+      841 aagggaataa gggcgacacg gaaatgttga atactcatac tcttcctttt tcaatattat
+      901 tgaagcattt atcagggtta ttgtctcatg agcggataca tatttgaatg tatttagaaa
+      961 aataaacaaa taggggttcc gcgcacattt ccccgaaaag tgccacctga cgtctaagaa
+     1021 accattatta tcatgacatt aacctataaa aataggcgta tcacgaggcc ctttcgtcac
+     1081 gcgtcctcgg tacctaacag gttggatgat aagtccccgg tcttcgtatg ccgtcttctg
+     1141 cttggcgcgc cctcgagcaa ttgaggaagc ggaacacgta gaaagccagt ccgcagaaac
+     1201 ggtgctgacc ccggatgaat gtcagctact gggctatctg gacaagggaa aacgcaagcg
+     1261 caaagagaaa gcaggtagct tgcagtgggc ttacatggcg atagctagac tgggcggttt
+     1321 tatggacagc aagcgaaccg gaattgccag ctggggcgcc ctctggtaag gttgggaagc
+     1381 cctgcaaagt aaactggatg gctttcttgc cgccaaggat ctgatggcgc aggggatcaa
+     1441 gatctgatca agagacagga tgaggatcgt ttcgcatgat tgaacaagat ggattgcacg
+     1501 caggttctcc ggccgcttgg gtggagaggc tattcggcta tgactgggca caacagacaa
+     1561 tcggctgctc tgatgccgcc gtgttccggc tgtcagcgca ggggcgcccg gttctttttg
+     1621 tcaagaccga cctgtccggt gccctgaatg aactgcagga cgaggcagcg cggctatcgt
+     1681 ggctggccac gacgggcgtt ccttgcgcag ctgtgctcga cgttgtcact gaagcgggaa
+     1741 gggactggct gctattgggc gaagtgccgg ggcaggatct cctgtcatct caccttgctc
+     1801 ctgccgagaa agtatccatc atggctgatg caatgcggcg gctgcatacg cttgatccgg
+     1861 ctacctgccc attcgaccac caagcgaaac atcgcatcga gcgagcacgt actcggatgg
+     1921 aagccggtct tgtcgatcag gatgatctgg acgaagagca tcaggggctc gcgccagccg
+     1981 aactgttcgc caggctcaag gcgcgcatgc ccgacggcga ggatctcgtc gtgacccatg
+     2041 gcgatgcctg cttgccgaat atcatggtgg aaaatggccg cttttctgga ttcatcgact
+     2101 gtggccggct gggtgtggcg gaccgctatc aggacatagc gttggctacc cgtgatattg
+     2161 ctgaagagct tggcggcgaa tgggctgacc gcttcctcgt gctttacggt atcgccgctc
+     2221 ccgattcgca gcgcatcgcc ttctatcgcc ttcttgacga gttcttctga gcgggactct
+     2281 ggggttcgaa atgactctag aatgcgagag tagggaactg ccaggcatca aataaaacga
+     2341 aaggctcagt cgaaagactg ggcctttcgt tttatctgtt gtttgtcggt gaacgctctc
+     2401 ctgagtagga caaatccgcc gggagcggat ttgaacgttg cgaagcaacg gcccggaggg
+     2461 tggcgggcag gacgcccgcc ataaactgcc aggcatcaaa ttaagcagaa ggccatcctg
+     2521 acggatggcc tttttgcgtt tctacctgca gggcgcgcca agcagaagac ggcatacgaa
+     2581 gaccggggac ttatcatcca acctgttagg atccagtgag cgcaacgcaa ttggaattcc
+     2641 catgtcagcc gttaagtgtt cctgtgtcac tcaaaattgc tttgagaggc tctaagggct
+     2701 tctcagtgcg ttacatccct ggcttgttgt ccacaaccgt taaaccttaa aagctttaaa
+     2761 agccttatat attctttttt ttcttataaa acttaaaacc ttagaggcta tttaagttgc
+     2821 tgatttatat taattttatt gttcaaacat gagagcttag tacgtgaaac atgagagctt
+     2881 agtacgttag ccatgagagc ttagtacgtt agccatgagg gtttagttcg ttaaacatga
+     2941 gagcttagta cgttaaacat gagagcttag tacgtgaaac atgagagctt agtacgtact
+     3001 atcaacaggt tgaactgctg atcttcagat cctctacgcc ggacgcatcg tggccggatc
+     3061 aattccgtga taggtgggct gcccttcctg gttggcttgg tttcatcagc catccgcttg
+     3121 ccctcatctg ttacgccggc ggtagccggc cagcctcgca gagcaggatt cccgttgagc
+     3181 accgccaggt gcgaataagg gacagtgaag aaggaacacc cgctcgcggg tgggcctact
+     3241 tcacctatcc tgcccggctg acgccgttgg atacaccaag gaaagtctac acgaaccctt
+     3301 tggcaaaatc ctgtatatcg tgcgaaaaag gatggatata ccgaaaaaat cgctataatg
+     3361 accccgaagc agggttatgc agcggaaaac ggaattgatc c
+//
