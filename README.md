@@ -31,12 +31,11 @@ Additional requirements:
 
 ### source code
 
-All code is in  <code>src/</code>, which contains a combination of bash and python scripts. The numbering at the beginning of each file name indicates the order in which that script should be run. Scripts containing the suffix "C" (e.g., 01C_fastp_align_fastq_RB-tn.sh) are specifically designed to handle sequencing reads from RB-Tn-Seq experiments. All other scripts are specific for sequencing reads from regular Tn-Seq experiments.
+All code is in  <code>src/</code>, which contains a combination of bash and python scripts. The numbering at the beginning of each file name indicates the order in which that script should be run. Scripts containing the suffix "C" (e.g., 01C_fastp_align_fastq_RB-tn.sh) are specifically designed to handle sequencing reads from RB-Tn-Seq experiments. All other scripts are specific for sequencing reads from regular Tn-Seq experiments. It is recommended that the the Tn-Seq alignment files (i.e., '.bam' files) be deduplicated by running the  <code>src/accessory_scripts/deduplicate_bam_files.sh</code> script after running the <code>src/01_fastp_align_fastq.sh</code> script. RB-Tn-Seq alignment files can also be deduplicated with the <code>src/accessory_scripts/deduplicate_bam_files_RB.sh</code> script.
 
 ### data
 
-Due to the large size of output files, outputs are generally written to a separate directory: <code>tn-seq_data/tn-seq_outputs/</code>. 
-Additionally, scripts for read alignment require the user to have reference genomes for *E. coli* MDS42 ([AP012306.1](https://www.ncbi.nlm.nih.gov/nuccore/AP012306)) and *E. coli* MG1655 ([U00096.3](https://www.ncbi.nlm.nih.gov/nuccore/545778205)) in <code>tn-seq_data/NGS_ref_genomes/MDS42/</code> and <code>tn-seq_data/NGS_ref_genomes/MG1655/</code>, respectively. 
+Due to the large size of output files, outputs are generally written to a separate directory: <code>tn-seq_data/tn-seq_outputs/</code>. This directory is outside of this repository. Additionally, scripts for read alignment require the user to have reference genomes for *E. coli* MDS42 ([AP012306.1](https://www.ncbi.nlm.nih.gov/nuccore/AP012306)) and *E. coli* MG1655 ([U00096.3](https://www.ncbi.nlm.nih.gov/nuccore/545778205)) in <code>tn-seq_data/NGS_ref_genomes/MDS42/</code> and <code>tn-seq_data/NGS_ref_genomes/MG1655/</code>, respectively. 
 
 Raw sequencing data are publicly available under NCBI Bioproject PRJNAXXXXXX.
 
