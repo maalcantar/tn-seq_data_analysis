@@ -40,6 +40,6 @@ Additionally, scripts for read alignment require the user to have reference geno
 
 Raw sequencing data are publicly available under NCBI Bioproject PRJNAXXXXXX.
 
-### plasmid_sequences
+### plasmid sequences
 
 Plasmid maps for key constructs used in this study can be found in the <code>plasmid_sequences</code> directory. 
