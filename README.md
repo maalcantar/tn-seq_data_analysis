@@ -41,4 +41,4 @@ Raw sequencing data are publicly available under NCBI Bioproject PRJNAXXXXXX.
 
 ### plasmid sequences
 
-Plasmid maps for key constructs used in this study can be found in the <code>plasmid_sequences</code> directory. 
+Plasmid maps for key constructs used in this study can be found in the <code>plasmid_maps</code> directory. 
