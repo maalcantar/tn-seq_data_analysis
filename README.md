@@ -1,7 +1,7 @@
 # A self-propagating, barcoded transposon system for the dynamic rewiring of genomic networks: Tn-Seq data analysis
 
 This repository contains all code needed to reproduce (RB-)Tn-Seq data processing and analyses described in:
->Max A. English, Miguel A. Alcantar, and James J. Collins. A self-propagating, barcoded transposon system for the dynamic rewiring of genomic networks. <i>In Revision</i>.
+>Max A. English*, Miguel A. Alcantar*, and James J. Collins. A self-propagating, barcoded transposon system for the dynamic rewiring of genomic networks. <i>In Revision</i>.
 
 Code authors: Max A. English and Miguel A. Alcantar.
 
